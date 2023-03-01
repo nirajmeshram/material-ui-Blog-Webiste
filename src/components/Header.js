@@ -16,7 +16,7 @@ const Header = () => {
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h6"  >
-                    Bloging Website
+                    Bloging Website test
                 </Typography>
                 <Box sx={{ marginLeft: 'auto' }}>
                     <IconButton color="inherit" sx={{ marginLeft: 'auto' }}>
