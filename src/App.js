@@ -1,24 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Body from './components/Body';
+import { createTheme, Grid, ThemeProvider, Toolbar, Container, Divider } from '@mui/material';
+import FeaturedPost from './components/FeaturedPost';
+import { featuredPosts, sidebar } from './components/data/Data';
+import PostCard from './components/PostCard';
+import Post from './components/Post'
+import SideBar from './components/SideBar';
+import Main from './components/Main'
+import HooksTest from './components/HooksTest';
 
 function App() {
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <HooksTest/>
+
+    < >
+      <Header />
+      <FeaturedPost />
+      <br />
+      <PostCard />
+      {/* <Post/> */}
+      <Container>
+        <Grid container spacing={2}>
+          <Grid item md={8}>
+            <Main />
+          </Grid>
+          <Grid item md={4} mt={4}>
+            <SideBar title={sidebar.title} description={sidebar.description} archives={sidebar.archives} />
+          </Grid>
+        </Grid>
+      </Container>
+    </>
+
   );
 }
 
